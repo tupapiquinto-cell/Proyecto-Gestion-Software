@@ -58,6 +58,7 @@ pipeline {
                 subject: "Build FALLIDO: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: "El build ha fallado.\nURL: ${env.BUILD_URL}"
                 debug: true
+                
             )
         }
     }
