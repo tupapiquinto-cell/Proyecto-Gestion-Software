@@ -49,7 +49,6 @@ pipeline {
                 to: 'waltduchi@gmail.com',
                 subject: "Build EXITOSO: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: "El build se completó correctamente.\nURL: ${env.BUILD_URL}"
-                debug: true
             )
         }
         failure {
@@ -57,8 +56,7 @@ pipeline {
                 to: 'waltduchi@gmail.com',
                 subject: "Build FALLIDO: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
                 body: "El build ha fallado.\nURL: ${env.BUILD_URL}"
-                debug: true
-                
+
             )
         }
     }
